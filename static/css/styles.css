@@ -1,0 +1,21 @@
+a {
+color: #99AC5D !important;
+}
+
+.button {
+background: #FF7B79 !important;
+border-color: #FF7B79 !important;
+color: white !important;
+}
+.button:hover {
+color: #D5EA79 !important;
+}
+
+.home-h1 {
+color: #FF7B79;
+font-weight: 800 !important;
+}
+
+.home-h3 {
+color: #A3A3A3;
+}

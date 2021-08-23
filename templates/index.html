@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Covid-19 Online-Statistics</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous" ></script>
+</head>
+<body style="background: #D5EA79">
+<div class="container bg-white shadow">
+    <div class="row">
+        <div class="col-lg-12 col-md-8 mx-auto text-center pt-5">
+            {% for i in range(count) %}
+            <h1 class="p-3 home-h1">{{ names[i].upper() }}</h1>
+            <h3 class="p-3 home-h3">{{ nums[i].upper() }}</h3>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 mx-auto">
+            <p class="m-5"><a href="{{ url_for('all_countries') }}">Statistics for all countries</a></p>
+        </div>
+        <div class="col-lg-4 col-md-4 mx-auto">
+            <p class="m-5 text-center"><a href="{{ url_for('mailing') }}">Newsletter</a></p>
+        </div>
+        <div class="col-lg-4 col-md-4 mx-auto">
+            <p class="m-5 text-right"><a href="{{ url_for('select_country') }}">Statistics for the selected country</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
